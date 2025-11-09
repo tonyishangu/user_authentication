@@ -34,3 +34,10 @@ def login_view(request):
         else:
             messages.error(request, 'Invalid username or password')
     return render(request, 'accounts/login.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
+
+def dashboard_view(request):
+    return render(request, 'accounts/dashboard.html')

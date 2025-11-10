@@ -9,7 +9,7 @@ def register_user(request):
     if request.method == 'POST':
         username=request.POST['username']
         password= request.POST['password']
-        confirm_password = request.POOST['confirm_password']
+        confirm_password = request.POST['confirm_password']
 
         if password == confirm_password:
             if User.objects.filter(username=username).exists():
